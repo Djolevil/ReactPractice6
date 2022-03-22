@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 import Login from './components/Login/Login';
 import Home from './components/Home/Home';
@@ -8,6 +8,7 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const loginHandler = (email, password) => {
+    localStorage.setItem('isLoggedIn', '1');
     setIsLoggedIn(true);
   };
 
